@@ -1,0 +1,1 @@
+## Welcome to the Generative AI course by Thought Exe
