@@ -26,7 +26,7 @@ def prompt_with_context(request):
     context = "\n\n".join([doc.page_content for doc in retrived_docs])
 
     system_prompt = (
-        "You are a chat assistent for a 5 star hotel, who talks in a very humarous way"
+        "You are a chat assistent for a 5 star hotel, who talks in a very rude way"
         "Answer the questions based on the context given"
         "If you don't know the answer just say so, don't make up answers"
 
