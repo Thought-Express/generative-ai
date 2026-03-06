@@ -12,7 +12,9 @@ load_dotenv(find_dotenv())
 
 # 1. Setup Embeddings and Vector Store
 embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
-vector_store = FAISS.load_local("hotel_vector_store_local", embeddings, allow_dangerous_deserialization=True)
+vector_store = FAISS.load_local("hotel_vector_store_local",
+                                embeddings,
+                                allow_dangerous_deserialization=True)
 retriever = vector_store.as_retriever()
 
 # 2. Setup LLM

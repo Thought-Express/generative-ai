@@ -1,17 +1,25 @@
-def fibonacci_series(n):
-    a, b = 0, 1
-    count = 0
-    series = []
-    while count < n:
-        series.append(a)
-        a, b = b, a + b
-        count += 1
-    return series
+def fibonacci_sequence(n):
+    """Return the first n numbers in the Fibonacci sequence."""
+    if n <= 0:
+        return []
+    if n == 1:
+        return [0]
+    sequence = [0, 1]
+    while len(sequence) < n:
+        sequence.append(sequence[-1] + sequence[-2])
+    return sequence
 
-# Get the first 10 numbers of the Fibonacci series
-fib_numbers = fibonacci_series(10)
 
-# Print the series
-print("Fibonacci Series (first 10 numbers):")
-for num in fib_numbers:
-    print(num)
+def main():
+    try:
+        count = int(input("How many Fibonacci numbers should I generate? ").strip())
+    except ValueError:
+        print("Please enter a valid integer.")
+        return
+
+    sequence = fibonacci_sequence(count)
+    print(sequence)
+
+
+if __name__ == "__main__":
+    main()

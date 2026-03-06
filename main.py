@@ -1,5 +1,4 @@
 from dotenv import load_dotenv, find_dotenv
-import os
 
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
